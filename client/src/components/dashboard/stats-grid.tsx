@@ -1,9 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 import { Card, CardContent } from "@/components/ui/card";
 import { MessageCircle, AlertTriangle, UserRound, Droplet } from "lucide-react";
+import type { DashboardStats } from "@shared/schema";
 
 export default function StatsGrid() {
-  const { data: stats, isLoading } = useQuery({
+  const { data: stats, isLoading } = useQuery<DashboardStats>({
     queryKey: ["/api/dashboard/stats"],
   });
 

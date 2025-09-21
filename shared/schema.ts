@@ -239,3 +239,11 @@ export type OrganDonationMatch = typeof organDonationMatches.$inferSelect;
 
 export type InsertHealthProduct = z.infer<typeof insertHealthProductSchema>;
 export type HealthProduct = typeof healthProducts.$inferSelect;
+
+// Dashboard stats type
+export type DashboardStats = {
+  activeChatCount: number;
+  emergencyCount: number;
+  availableDoctorCount: number;
+  bloodDonorCount: number;
+};
