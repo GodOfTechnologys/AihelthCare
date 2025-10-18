@@ -1,0 +1,4 @@
+[
+  {"id":1,"user_id":1,"sender_type":"user","content":"Hi, what's the weather?","created_at":"2025-10-01T10:00:00Z"},
+  {"id":2,"user_id":1,"sender_type":"bot","content":"The forecast is sunny.","created_at":"2025-10-01T10:00:01Z"}
+]
