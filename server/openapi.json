@@ -1,0 +1,17 @@
+{
+  "openapi": "3.0.0",
+  "info": { "title": "GlobalSmart Hub API", "version": "0.1.0" },
+  "paths": {
+    "/api/health": { "get": { "responses": { "200": { "description": "ok" } } } },
+    "/api/auth/register": { "post": { "responses": { "200": { "description": "register" } } } },
+    "/api/auth/login": { "post": { "responses": { "200": { "description": "login" } } } },
+    "/api/users": { "get": { "responses": { "200": { "description": "list users" } } } },
+    "/api/messages": { "get": { "responses": { "200": { "description": "list messages" } } }, "post": { "responses": { "200": { "description": "create message" } } } },
+    "/api/analytics/metrics": { "get": { "responses": { "200": { "description": "metrics" } } } },
+    "/api/analytics/log": { "post": { "responses": { "200": { "description": "log" } } } },
+    "/api/notifications": { "get": { "responses": { "200": { "description": "list notifications" } } }, "post": { "responses": { "200": { "description": "create notification" } } } },
+    "/api/settings/{userId}": { "get": { "responses": { "200": { "description": "get settings" } } }, "put": { "responses": { "200": { "description": "update settings" } } } },
+    "/api/files/upload": { "post": { "responses": { "200": { "description": "upload" } } } },
+    "/api/files/list": { "get": { "responses": { "200": { "description": "list files" } } } }
+  }
+}
