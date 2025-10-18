@@ -23,8 +23,8 @@ app.use(morgan('dev'));
 app.use(express.json({ limit: '2mb' }));
 app.use(express.urlencoded({ extended: true }));
 
-// Static files for uploads
-app.use('/uploads', express.static(path.join(__dirname, '..', 'uploads')));
+// Static files for uploads (stored at <server>/uploads)
+app.use('/uploads', express.static(path.resolve(process.cwd(), 'uploads')));
 
 app.get('/api/health', (_req, res) => {
   res.json({ status: 'ok', service: 'GlobalSmart Hub', time: new Date().toISOString() });

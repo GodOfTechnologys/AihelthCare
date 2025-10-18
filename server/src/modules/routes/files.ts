@@ -4,7 +4,8 @@ import path from 'path';
 import fs from 'fs';
 import { requireAuth } from '../middleware/auth';
 
-const uploadsDir = path.join(__dirname, '..', '..', 'uploads');
+// Store uploads at /server/uploads so express static can serve them
+const uploadsDir = path.join(__dirname, '..', '..', '..', 'uploads');
 if (!fs.existsSync(uploadsDir)) fs.mkdirSync(uploadsDir, { recursive: true });
 
 const storage = multer.diskStorage({
